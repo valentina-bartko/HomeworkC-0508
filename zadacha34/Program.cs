@@ -28,13 +28,9 @@ void EvenNumbers (int[] Array)
 {
     int index = 0;
     int amount = 0;
-    while (index < Array.Length)
+    for (index = 0; index < Array.Length; index++)
     {
-        if (Array[index] % 2 == 0)
-        {
-            amount = amount + 1;
-        }
-        index++;
+            if (Array[index] % 2 == 0) amount++;
     }
     Console.WriteLine($"-> {amount}");
 }
