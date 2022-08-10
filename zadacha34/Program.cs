@@ -15,20 +15,17 @@ int[] array = new int[4];
 
 void Array (int[] Array)
 {
-    int index = 0;
-    while (index < Array.Length)
+    for (int index = 0; index < Array.Length; index ++)
     {
         Array[index] = new Random().Next(100, 1000);
         Console.Write($"{Array[index]}, ");
-        index++;
     }
 }
 
 void EvenNumbers (int[] Array)
 {
-    int index = 0;
     int amount = 0;
-    for (index = 0; index < Array.Length; index++)
+    for (int index = 0; index < Array.Length; index++)
     {
             if (Array[index] % 2 == 0) amount++;
     }
