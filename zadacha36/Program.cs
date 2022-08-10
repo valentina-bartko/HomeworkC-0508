@@ -12,27 +12,20 @@ int[] array = new int[8]; //создаю массив
 //Заполняю и распечатываю массив
 void Array (int[] Array)
 {
-    int index = 0;
-    while (index < Array.Length)
+    for (int index = 0; index < Array.Length; index++)
     {
         Array[index] = new Random().Next(-100, 101);
         Console.Write($"{Array[index]}, ");
-        index++;
     }
 }
 
 //Метод нахождения суммы элементов, стоящих на нечётных позициях
 void Sum (int[] Array)
 {
-    int index = 0;
     int sum = 0;
-    while(index < Array.Length)
+    for (int index = 0; index < Array.Length; index++)
     {
-    if (index % 2 == 1)
-    {
-        sum = sum + Array[index];
-    }
-    index++;
+        if (index % 2 == 1) sum += Array[index];
     }
     Console.WriteLine($"-> {sum}");
 }
