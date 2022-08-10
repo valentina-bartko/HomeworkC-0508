@@ -11,12 +11,10 @@ float[] array = new float[5]; // создаю массив вещественн�
 // метод заполнения и печати массива
 void Array(float[] Array)
 {
-    int index = 0;
-    while (index < Array.Length)
+    for (int index = 0; index < Array.Length; index++)
     {
         Array[index] = new Random().Next(1, 101);
         Console.Write($"{Array[index]}, ");
-        index++;
     }
 }
 
@@ -27,18 +25,13 @@ void MaxMin(float[] Array)
     int index = 0;
     float max = Array[index];
     float min = Array[index];
-    index++;
-    while (index < Array.Length)
+    for (index = 1; index < Array.Length; index++)
     {
-        if (Array[index] > max)
+        if (Array[index] > max) max = Array[index];
+        else
         {
-            max = Array[index];
+            if (Array[index] < min) min = Array[index];
         }
-        if (Array[index] < min)
-        {
-            min = Array[index];
-        }
-        index++;
     }
     res = max - min;
     Console.WriteLine($"-> {res}");
